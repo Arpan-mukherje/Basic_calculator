@@ -70,8 +70,8 @@ class _calculatorAppState extends State<calculatorApp> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          backgroundColor: Color.fromARGB(255, 69, 67, 67),
-          title: Center(
+          backgroundColor: const Color.fromARGB(255, 69, 67, 67),
+          title: const Center(
             child: Text(
               'Calculator',
               style: TextStyle(color: Colors.white, fontSize: 30),
@@ -79,256 +79,254 @@ class _calculatorAppState extends State<calculatorApp> {
           )),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
-        child: Container(
-          child: Column(mainAxisAlignment: MainAxisAlignment.end, children: [
-            Container(
-              child: Padding(
-                padding: EdgeInsets.only(right: 14),
-                child: Text(
-                  history,
-                  style: TextStyle(
-                      fontSize: 29, color: Color.fromARGB(83, 255, 255, 255)),
+        child: Column(mainAxisAlignment: MainAxisAlignment.end, children: [
+          Container(
+            alignment: const Alignment(1.0, 1.0),
+            child: Padding(
+              padding: const EdgeInsets.only(right: 14),
+              child: Text(
+                history,
+                style: const TextStyle(
+                    fontSize: 29, color: Color.fromARGB(83, 255, 255, 255)),
+              ),
+            ),
+          ),
+          Container(
+            alignment: const Alignment(1.0, 1.0),
+            child: Padding(
+              padding: const EdgeInsets.all(20.0),
+              child: Text(
+                tTodis,
+                style: const TextStyle(fontSize: 50, color: Colors.white),
+              ),
+            ),
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              Padding(
+                padding: const EdgeInsets.all(5.0),
+                child: buttons(
+                  text: 'AC',
+                  coloury: Colors.black,
+                  tcolour: Colors.white,
+                  tsize: 30,
+                  callback: btnclk,
                 ),
               ),
-              alignment: Alignment(1.0, 1.0),
-            ),
-            Container(
-              child: Padding(
-                padding: const EdgeInsets.all(20.0),
-                child: Text(
-                  tTodis,
-                  style: TextStyle(fontSize: 50, color: Colors.white),
+              Padding(
+                padding: const EdgeInsets.all(5.0),
+                child: buttons(
+                  text: 'C',
+                  coloury: Colors.black,
+                  tcolour: Colors.white,
+                  tsize: 30,
+                  callback: btnclk,
                 ),
               ),
-              alignment: Alignment(1.0, 1.0),
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                Padding(
-                  padding: const EdgeInsets.all(5.0),
-                  child: buttons(
-                    text: 'AC',
-                    coloury: Colors.black,
-                    tcolour: Colors.white,
-                    tsize: 30,
-                    callback: btnclk,
-                  ),
+              Padding(
+                padding: const EdgeInsets.all(5.0),
+                child: buttons(
+                  text: '<',
+                  coloury: Colors.black,
+                  tcolour: Colors.white,
+                  tsize: 40,
+                  callback: btnclk,
                 ),
-                Padding(
-                  padding: const EdgeInsets.all(5.0),
-                  child: buttons(
-                    text: 'C',
-                    coloury: Colors.black,
-                    tcolour: Colors.white,
-                    tsize: 30,
-                    callback: btnclk,
-                  ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(5.0),
+                child: buttons(
+                  text: '/',
+                  coloury: Colors.black,
+                  tcolour: Colors.white,
+                  tsize: 35,
+                  callback: btnclk,
                 ),
-                Padding(
-                  padding: const EdgeInsets.all(5.0),
-                  child: buttons(
-                    text: '<',
-                    coloury: Colors.black,
-                    tcolour: Colors.white,
-                    tsize: 40,
-                    callback: btnclk,
-                  ),
+              ),
+            ],
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              Padding(
+                padding: const EdgeInsets.all(5.0),
+                child: buttons(
+                  text: '9',
+                  coloury: const Color.fromARGB(255, 150, 136, 14),
+                  tcolour: Colors.white,
+                  tsize: 45,
+                  callback: btnclk,
                 ),
-                Padding(
-                  padding: const EdgeInsets.all(5.0),
-                  child: buttons(
-                    text: '/',
-                    coloury: Colors.black,
-                    tcolour: Colors.white,
-                    tsize: 35,
-                    callback: btnclk,
-                  ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(5.0),
+                child: buttons(
+                  text: '8',
+                  coloury: const Color.fromARGB(255, 150, 136, 14),
+                  tcolour: Colors.white,
+                  tsize: 45,
+                  callback: btnclk,
                 ),
-              ],
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                Padding(
-                  padding: const EdgeInsets.all(5.0),
-                  child: buttons(
-                    text: '9',
-                    coloury: Color.fromARGB(255, 150, 136, 14),
-                    tcolour: Colors.white,
-                    tsize: 45,
-                    callback: btnclk,
-                  ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(5.0),
+                child: buttons(
+                  text: '7',
+                  coloury: const Color.fromARGB(255, 150, 136, 14),
+                  tcolour: Colors.white,
+                  tsize: 45,
+                  callback: btnclk,
                 ),
-                Padding(
-                  padding: const EdgeInsets.all(5.0),
-                  child: buttons(
-                    text: '8',
-                    coloury: Color.fromARGB(255, 150, 136, 14),
-                    tcolour: Colors.white,
-                    tsize: 45,
-                    callback: btnclk,
-                  ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(5.0),
+                child: buttons(
+                  text: 'X',
+                  coloury: Colors.black,
+                  tcolour: Colors.white,
+                  tsize: 35,
+                  callback: btnclk,
                 ),
-                Padding(
-                  padding: const EdgeInsets.all(5.0),
-                  child: buttons(
-                    text: '7',
-                    coloury: Color.fromARGB(255, 150, 136, 14),
-                    tcolour: Colors.white,
-                    tsize: 45,
-                    callback: btnclk,
-                  ),
+              ),
+            ],
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              Padding(
+                padding: const EdgeInsets.all(5.0),
+                child: buttons(
+                  text: '6',
+                  coloury: const Color.fromARGB(255, 150, 136, 14),
+                  tcolour: Colors.white,
+                  tsize: 45,
+                  callback: btnclk,
                 ),
-                Padding(
-                  padding: const EdgeInsets.all(5.0),
-                  child: buttons(
-                    text: 'X',
-                    coloury: Colors.black,
-                    tcolour: Colors.white,
-                    tsize: 35,
-                    callback: btnclk,
-                  ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(5.0),
+                child: buttons(
+                  text: '5',
+                  coloury: const Color.fromARGB(255, 150, 136, 14),
+                  tcolour: Colors.white,
+                  tsize: 45,
+                  callback: btnclk,
                 ),
-              ],
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                Padding(
-                  padding: const EdgeInsets.all(5.0),
-                  child: buttons(
-                    text: '6',
-                    coloury: Color.fromARGB(255, 150, 136, 14),
-                    tcolour: Colors.white,
-                    tsize: 45,
-                    callback: btnclk,
-                  ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(5.0),
+                child: buttons(
+                  text: '4',
+                  coloury: const Color.fromARGB(255, 150, 136, 14),
+                  tcolour: Colors.white,
+                  tsize: 45,
+                  callback: btnclk,
                 ),
-                Padding(
-                  padding: const EdgeInsets.all(5.0),
-                  child: buttons(
-                    text: '5',
-                    coloury: Color.fromARGB(255, 150, 136, 14),
-                    tcolour: Colors.white,
-                    tsize: 45,
-                    callback: btnclk,
-                  ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(5.0),
+                child: buttons(
+                  text: '-',
+                  coloury: Colors.black,
+                  tcolour: Colors.white,
+                  tsize: 65,
+                  callback: btnclk,
                 ),
-                Padding(
-                  padding: const EdgeInsets.all(5.0),
-                  child: buttons(
-                    text: '4',
-                    coloury: Color.fromARGB(255, 150, 136, 14),
-                    tcolour: Colors.white,
-                    tsize: 45,
-                    callback: btnclk,
-                  ),
+              ),
+            ],
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              Padding(
+                padding: const EdgeInsets.all(5.0),
+                child: buttons(
+                  text: '3',
+                  coloury: const Color.fromARGB(255, 150, 136, 14),
+                  tcolour: Colors.white,
+                  tsize: 45,
+                  callback: btnclk,
                 ),
-                Padding(
-                  padding: const EdgeInsets.all(5.0),
-                  child: buttons(
-                    text: '-',
-                    coloury: Colors.black,
-                    tcolour: Colors.white,
-                    tsize: 65,
-                    callback: btnclk,
-                  ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(5.0),
+                child: buttons(
+                  text: '2',
+                  coloury: const Color.fromARGB(255, 150, 136, 14),
+                  tcolour: Colors.white,
+                  tsize: 45,
+                  callback: btnclk,
                 ),
-              ],
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                Padding(
-                  padding: const EdgeInsets.all(5.0),
-                  child: buttons(
-                    text: '3',
-                    coloury: Color.fromARGB(255, 150, 136, 14),
-                    tcolour: Colors.white,
-                    tsize: 45,
-                    callback: btnclk,
-                  ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(5.0),
+                child: buttons(
+                  text: '1',
+                  coloury: const Color.fromARGB(255, 150, 136, 14),
+                  tcolour: Colors.white,
+                  tsize: 45,
+                  callback: btnclk,
                 ),
-                Padding(
-                  padding: const EdgeInsets.all(5.0),
-                  child: buttons(
-                    text: '2',
-                    coloury: Color.fromARGB(255, 150, 136, 14),
-                    tcolour: Colors.white,
-                    tsize: 45,
-                    callback: btnclk,
-                  ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(5.0),
+                child: buttons(
+                  text: '+',
+                  coloury: Colors.black,
+                  tcolour: Colors.white,
+                  tsize: 45,
+                  callback: btnclk,
                 ),
-                Padding(
-                  padding: const EdgeInsets.all(5.0),
-                  child: buttons(
-                    text: '1',
-                    coloury: Color.fromARGB(255, 150, 136, 14),
-                    tcolour: Colors.white,
-                    tsize: 45,
-                    callback: btnclk,
-                  ),
+              ),
+            ],
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              Padding(
+                padding: const EdgeInsets.all(5.0),
+                child: buttons(
+                  text: '+/-',
+                  coloury: const Color.fromARGB(255, 150, 136, 14),
+                  tcolour: Colors.white,
+                  tsize: 34,
+                  callback: btnclk,
                 ),
-                Padding(
-                  padding: const EdgeInsets.all(5.0),
-                  child: buttons(
-                    text: '+',
-                    coloury: Colors.black,
-                    tcolour: Colors.white,
-                    tsize: 45,
-                    callback: btnclk,
-                  ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(5.0),
+                child: buttons(
+                  text: '0',
+                  coloury: const Color.fromARGB(255, 150, 136, 14),
+                  tcolour: Colors.white,
+                  tsize: 37,
+                  callback: btnclk,
                 ),
-              ],
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                Padding(
-                  padding: const EdgeInsets.all(5.0),
-                  child: buttons(
-                    text: '+/-',
-                    coloury: Color.fromARGB(255, 150, 136, 14),
-                    tcolour: Colors.white,
-                    tsize: 34,
-                    callback: btnclk,
-                  ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(5.0),
+                child: buttons(
+                  text: '00',
+                  coloury: const Color.fromARGB(255, 150, 136, 14),
+                  tcolour: Colors.white,
+                  tsize: 35,
+                  callback: btnclk,
                 ),
-                Padding(
-                  padding: const EdgeInsets.all(5.0),
-                  child: buttons(
-                    text: '0',
-                    coloury: Color.fromARGB(255, 150, 136, 14),
-                    tcolour: Colors.white,
-                    tsize: 37,
-                    callback: btnclk,
-                  ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(5.0),
+                child: buttons(
+                  text: '=',
+                  coloury: Colors.black,
+                  tcolour: Colors.white,
+                  tsize: 45,
+                  callback: btnclk,
                 ),
-                Padding(
-                  padding: const EdgeInsets.all(5.0),
-                  child: buttons(
-                    text: '00',
-                    coloury: Color.fromARGB(255, 150, 136, 14),
-                    tcolour: Colors.white,
-                    tsize: 35,
-                    callback: btnclk,
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(5.0),
-                  child: buttons(
-                    text: '=',
-                    coloury: Colors.black,
-                    tcolour: Colors.white,
-                    tsize: 45,
-                    callback: btnclk,
-                  ),
-                ),
-              ],
-            ),
-          ]),
-        ),
+              ),
+            ],
+          ),
+        ]),
       ),
     );
   }
